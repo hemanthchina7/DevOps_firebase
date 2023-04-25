@@ -1,6 +1,6 @@
 describe('dashboard', () => {
   beforeEach(() => {
-    cy.visit('localhost:4200/dashboard');
+    cy.visit('https://devopsfinal-f8489.web.app/dashboard');
   });
 
   it(`has title 'Tour of Heroes'`, () => {
@@ -20,8 +20,8 @@ describe('dashboard', () => {
     cy.get('app-hero-search').should('contain', 'Hero Search');
   });
 
-  it(`says hello from Matt`, () => {
-    cy.contains('Hello from Matt');
+  it(`has updated title`, () => {
+    cy.contains('Top Heroes - New Hero - Hemanth');
   });
 
   it('can search', () => {
